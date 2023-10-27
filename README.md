@@ -1,5 +1,4 @@
 ## Docker
-```
 This repo is maintained for docker
 [Docker_overview](https://docs.docker.com/get-started/overview/)
 
@@ -20,14 +19,14 @@ Each VM has its own Guest OS running on Host OS.
 # Containers:
 `Containers are advancement to VM's. 
 A container is a package or bundle which contains the application package + application dependencies/libraries + OS system dependencies like if application requires python etc`
-```
+
   1. Containers are lightweight and contain everything needed to run the application, so you don't need to rely on what's installed on the host
   2. Containers do not have a complete Operating system like VM, they share resources from host machine
   3. Containers are created on top of Docker platform(a software) and shares the same Host OS along with resources and there is no guest OS
   4. Containers can be created in 2 ways 
     - Model1: deploy docker on Physical machine 
     - Model2: deploy docker on Virtual machine, where VM is created on physical machine (model2 is mostly used)
-```
+
 
 # How to create container/Life cycle of docker: 
   we need to run  Docker commands for below execution on docker engine:
@@ -60,6 +59,5 @@ A container is a package or bundle which contains the application package + appl
 # CONS of using Docker:
 
 Docker is a single point of failure, incase if docker engine crash/down for any reason, all your containers wont be available
-```
 
 
