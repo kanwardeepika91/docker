@@ -1,5 +1,5 @@
 ## Docker
-this repo is maintained for docker
+`this repo is maintained for docker
 (https://docs.docker.com/get-started/overview/)
     Before we start with Docker, lets first understand the Virtual Machine and why concept of container came into picture
 
@@ -56,6 +56,6 @@ How to create container/Life cycle of docker: we need to run  Docker commands fo
 
 # CONS of using Docker:
 
-Docker is a single point of failure, incase if docker engine crash/down for any reason, all your containers wont be available
+Docker is a single point of failure, incase if docker engine crash/down for any reason, all your containers wont be available`
 
 
