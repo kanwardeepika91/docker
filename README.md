@@ -2,7 +2,7 @@
 This repo is maintained for docker
 [Docker_overview](https://docs.docker.com/get-started/overview/)
 
-# Before we start with Docker, lets first understand the Virtual Machine and why concept of container came into picture
+### Before we start with Docker, lets first understand the Virtual Machine and why concept of container came into picture
 
 ## Virtual machine:
 A virtual machine is an advancement to Physical machines where multiple Guest VM's are created on top of physical host machine with a concept of Hypervisor or virtualization.
@@ -29,8 +29,11 @@ A container is a package or bundle which contains the application package + appl
   ```
 
 ## How to create container/Life cycle of docker: 
+  ```
   we need to run  Docker commands for below execution on docker engine:
-  `Write a DockerFile -> Build/Execute on Docker platform/Docker Engine -> this will convert file into Docker image  -> covert Docker image to Docker container`
+  
+  Write a DockerFile -> Build/Execute on Docker platform/Docker Engine -> this will convert file into Docker image  -> covert Docker image to Docker container`
+  ```
 
 ## What is Docker?
  Docker is a containerization platform where you can build, run the applications in an isolated environment called container and push these containers to Docker public/private registry
