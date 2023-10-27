@@ -1,0 +1,27 @@
+# NOTE: docker build command should be executed from the dockerfile location or give the path 
+# write your first docker file now
+
+# Setting a Base Image using FROM keyword. our image would start building taking base as Ubuntu.
+FROM ubuntu:latest
+
+# define Author (Optional) using MAINTAINER keyword
+LABEL username="cloudhelp"
+
+# Running a commands on the base image to form new layers using RUN keyword.These commands above install python over Ubuntu.
+RUN apt-get update -y  
+RUN apt-get install python3 -y 
+#(if there are multiple commands to RUN, then use && -> RUN apt-get update-y && apt-get install python -y)
+# workdir of container where you want to copy the code from host machine to container filesystem. path will be created if it doesn't exist bydefault
+WORKDIR /python-application
+
+# copy the python-app.py we created on to container workdir.
+COPY . /python-application 
+
+# define the executable in ENTRYPOINT keyword if you don't want those to be override.
+ENTRYPOINT [ "python3" ]
+# Execute the commands on container , you can also add the python3 in CMD as shown below, but adding it under ENTRYPOINT is recommended. A user can override the CMD values when needed.
+
+CMD [ "python-app.py" ]
+#CMD ["python3", "python-app.py"] 
+
+
