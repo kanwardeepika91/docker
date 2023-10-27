@@ -29,9 +29,8 @@ A container is a package or bundle which contains the application package + appl
   ```
 
 ## How to create container/Life cycle of docker: 
-  ```
-  we need to run  Docker commands for below execution on docker engine:
-  
+   we need to run  Docker commands for below execution on docker engine:
+ ```
   Write a DockerFile -> Build/Execute on Docker platform/Docker Engine -> this will convert file into Docker image  -> covert Docker image to Docker container`
   ```
 
