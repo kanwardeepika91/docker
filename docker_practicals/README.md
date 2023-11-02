@@ -1,5 +1,5 @@
 # Run Django application as Container
-# Explaination:
+# Explaination, first create your code in your local:
 1. Django is a free and open-source, Python-based web framework for backend web applications
 (https://docs.djangoproject.com/en/4.2/intro/install/)
 2. Django requires python to be installed, so we will accordingly write dockerfile
@@ -33,7 +33,7 @@
 
 ```
 # Run the project as container , commands to be executed are 
-    1. docker build -t cloudhelp/task1-django-sampleweb:latest
+    1. docker build -t cloudhelp/task1-django-sampleweb:latest . 
     2. docker run -p 1234:8000 -it cloudhelp/task1-django-sampleweb: latest (or you can copy the image id instead this long image name)
     3. As docker is running on host, you can't access the webapplication outside its network, hence we need to expose the network by port mapping
 

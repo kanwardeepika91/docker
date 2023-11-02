@@ -1,17 +1,17 @@
 FROM ubuntu:latest
 # Running a commands on the base image to form new layers using RUN keyword.These commands above install python over Ubuntu.
-RUN apt-get update -y  && \
-    apt-get install python3 -y && \
-    pip3 install Django && \
-    python3 -m django --version \
-    cd /task1_django_web_container/
-
 
 # workdir of container where you want to copy the code from host machine to container filesystem. path will be created if it doesn't exist bydefault
-WORKDIR /task1/
+WORKDIR /task2/task1_django_web_container/
 
-# copy the python-app.py we created on to container workdir.
-COPY . /task1
+# copy the whole folder we created on to container workdir.
+COPY . /task2
+
+RUN apt update -y  && \
+    apt install python3 -y && \
+    apt install python3-pip -y &&  \
+    pip install -r requirements.txt 
+
 
 # define the executable in ENTRYPOINT keyword if you don't want those to be override.
 ENTRYPOINT [ "python3" ]
