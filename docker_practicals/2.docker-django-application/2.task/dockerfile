@@ -2,10 +2,10 @@ FROM ubuntu:latest
 # Running a commands on the base image to form new layers using RUN keyword.These commands above install python over Ubuntu.
 
 # workdir of container where you want to copy the code from host machine to container filesystem. path will be created if it doesn't exist bydefault
-WORKDIR /task2/task1_django_web_container/
+WORKDIR /task2/task1_django_web_container/ 
 
-# copy the whole folder we created on to container workdir.
-COPY . /task2
+# copy the whole folder we created on to container workdir. executed from task2 folder
+COPY . /task2  
 
 RUN apt update -y  && \
     apt install python3 -y && \

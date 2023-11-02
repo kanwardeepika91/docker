@@ -1,0 +1,20 @@
+FROM ubuntu:latest
+# Running a commands on the base image to form new layers using RUN keyword.These commands above install python over Ubuntu.
+
+# workdir of container where you want to copy the code from host machine to container filesystem. path will be created if it doesn't exist bydefault
+WORKDIR /task3/django_html
+
+# copy the whole folder we created on to container workdir.executed from task3 folder
+COPY . /task3
+
+# Run below packages 
+RUN apt update -y  && \
+    apt install python3 -y && \
+    apt install python3-pip -y &&  \
+    pip install -r requirements.txt 
+
+# define the executable in ENTRYPOINT keyword if you don't want those to be override.
+ENTRYPOINT [ "python3" ]
+# Execute the commands on container , you can also add the python3 in CMD as shown below, but adding it under ENTRYPOINT is recommended. A user can override the CMD values when needed.
+
+CMD ["manage.py", "runserver", "0.0.0.0:8000"] 
