@@ -65,6 +65,9 @@ A container is a package or bundle which contains the application package + appl
 
 ## CONS of using Docker:
 
-Docker is a single point of failure, incase if docker engine crash/down for any reason, all your containers wont be available
+1. Docker is a single point of failure, incase if docker engine crash/down for any reason, all your containers wont be available
+2. If docker container is lost, then the data is lost. so the containers are ephimeral in nature. To make data persistent, we have to make volume persistent or use bind mounts
+3. Containers are lightweight, hence donot even have its own filesystem. 
+
 
 

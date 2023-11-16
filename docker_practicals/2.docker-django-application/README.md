@@ -110,7 +110,7 @@
 13.create a dockerfile , check dockerfile 
 14.$ `docker build -t cloudhelp/django_html_hello_world .`
 15. $ `docker images`
-16. $ 'docker run -it 456:8000 9176dbcdba' # check image: 456_django_hello_world_html.png
+16. $ 'docker run -it -p 456:8000 9176dbcdba' # check image: 456_django_hello_world_html.png
 
 ## Additional Info: 
 ```
